@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    padding: 20px ;
+}
+
+li:hover{
+    background-color: red;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: yellow;
+}
+
+
+
+/* header */
+.header .search input{
+    padding: 10px 30px;
+    border: 1px solid rgb(135, 135, 135);
+    width: 400px;
+    height: 40px;
+}
+
+.header .search i{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .item{
+    background-color: #FF3399;
+    color: white;
+    padding: 10px;
+    width: 170px;
+}
+
+.header .item:hover{
+    background-color: yellow;
+    color: red;
+}
+
+.header .item:hover i{
+    color: red;
+}
+
+
+/* menu chứa 2 loại */
+
+/* .items_lv1 {
+    width: 13%;
+    text-align: center;
+    border-right: 1px solid rgb(128, 126, 126);
+}
+
+.items_lv2, .items_lv3{
+    text-align: left;
+    border-bottom: 1px solid rgb(128, 126, 126);
+}
+
+
+.nav_lv1, .nav_lv2, .nav_lv3{
+    background-color: brown;
+}
+
+
+.nav_lv2{
+    display: none;
+}
+
+.nav_lv1 li:nth-child(3){
+    position: relative;
+}
+.nav_lv1 li:nth-child(3):hover .nav_lv2{
+    position: absolute;
+    width: 193px;
+    margin-top: 20px;
+    display: block;
+    left: 0;
+}
+
+
+.nav_lv3{
+    display: none;
+}
+.nav_lv2 li:nth-child(4){
+    position: relative;
+}
+
+.nav_lv2 li:nth-child(4):hover .nav_lv3{
+    position: absolute;
+    width: 200px;
+    display: block;
+    top: 0;
+    left: 193px;
+} */
+
+
+
+
+
+/* menu ngang */
+
+/* .items_lv1 {
+    width: 10%;
+    text-align: center;
+    border-right: 1px solid rgb(128, 126, 126);
+}
+
+.items_lv2{
+    text-align: left;
+    border-bottom: 1px solid rgb(128, 126, 126);
+}
+.menu .nav_lv1{
+    background-color: black;
+    color: white;
+}
+
+.menu .nav_lv2{
+    display: none;
+    background-color: white;
+    color: black;
+}
+
+.menu .nav_lv2 i{
+    color: black;
+}
+
+.menu .nav_lv1 li:nth-child(3){
+    position: relative;
+}
+.menu .nav_lv1 li:nth-child(3):hover .nav_lv2{
+    display: block;
+    position: absolute;
+    width: 150px;
+    background-color: white;
+    margin-top: 20px;
+    left: 0;
+} */
+
+
+
+
+
+/* menu dọc */
+.nav_lv2{
+    display: block;
+    width: 193px;
+}
+
+.items_lv3{
+    text-align: left;
+    border-bottom: 1px solid rgb(128, 126, 126);
+}
+
+.nav_lv2, .nav_lv3{
+    background-color: brown;
+}
+
+.nav_lv3{
+    display: none;
+    width: 200px;
+}
+.nav_lv2 li:nth-child(4){
+    position: relative;
+}
+
+.nav_lv2 li:nth-child(4):hover .nav_lv3{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 193px;
+}
+
+
+
+
+
+
+
+/* 8 ảnh */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.right .product {
+    height: 100%;
+    width: 25%;
+}
+
+.right .product .infor {
+    width: 100%;
+    padding: 40px 20px 10px 20px;
+    border: 1px solid rgb(176, 176, 176);
+}
+
+.product > div:last-child {
+    border: 1px solid rgb(176, 176, 176);
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.right .product .price {
+    color: red;
+    font-size: 20px;
+}
+
+.product .original-price {
+    color: gray;
+    margin-top: 10px;
+    text-decoration: line-through;
+    font-size: 20px;
+}
+
+.product .discount{
+    background-color: rgb(178, 44, 44);
+    border-radius: 5px;
+    padding: 5px;
+}

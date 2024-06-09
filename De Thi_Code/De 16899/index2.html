@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="1">
+            <tr>
+                <td>Họ và tên: </td>
+                <td><input type="text" id="one"></td>
+            </tr>
+
+            <tr>
+                <td>Tên: </td>
+                <td><input type="text" id="two" readonly></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" onclick="show(),event.preventDefault()">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function show(){
+            let one = document.getElementById("one")
+            let two = document.getElementById("two")
+
+            let one_change = one.value.trim().split(" ");
+            
+            two.value = one_change[one_change.length - 1]
+        }
+        
+
+    </script>
+    
+</body>
+</html>

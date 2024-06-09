@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr align="center">
+                <td colspan="2">Tinh luong nha vien</td>
+            </tr>
+            <tr>
+                <td>ten nhan vien</td>
+                <td><input type="text" id="tnv" required></td>
+            </tr>
+            <tr>
+                <td>so thang lam viec</td>
+                <td><input type="text" id="stlv" required></td>
+            </tr>
+            <tr>
+                <td>he so luong</td>
+                <td><input type="text" id="hsl" readonly></td>
+            </tr>
+            <tr>
+                <td>luong co ban</td>
+                <td><input type="text" id="lcb" readonly></td>
+            </tr>
+            <tr>
+                <td>luong thang</td>
+                <td><input type="text" id="lt" readonly></td>
+            </tr>
+            <tr>
+                <td>thue thu nhap</td>
+                <td><input type="text" id="ttn" readonly></td>
+            </tr>
+            <tr>
+                <td>thuc linh</td>
+                <td><input type="text" id="tl" readonly></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" value="tinh tien" onclick="tinhtien(), event.preventDefault()">
+                    <input type="reset" value="xoa">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+        function tinhtien(){
+            let hsl = document.getElementById("hsl")
+            let lcb = document.getElementById("lcb")
+            lcb.value = 650000
+            
+            let stlv = document.getElementById("stlv")
+            if(stlv.value < 12) hsl.value = 1.92
+            else if(stlv.value >= 12 && stlv.value < 36) hsl.value = 2.34
+            else if(stlv.value >= 36 && stlv.value< 60) hsl.value = 3
+            else hsl.value = 4.5
+
+            let lt = document.getElementById("lt")
+            lt.value = hsl.value * lcb.value
+
+            let ttn = document.getElementById("ttn")
+            if(lt.value == 15000000) ttn.value = 0.3 * lt.value
+            else if(lt.value >=7000000 && lt.value <= 15000000) ttn.value = 0.2 * lt.value
+            else if(lt.value < 7000000) ttn.value = 0.1 * lt.value
+
+            let tl = document.getElementById("tl")
+            tl.value = lt.value - ttn.value
+        }
+        
+    </script>
+</body>
+</html>

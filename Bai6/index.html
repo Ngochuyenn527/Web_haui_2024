@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* Bai 1 */
+        .container {
+            margin: 50px auto;
+            width: 300px;
+        }
+
+        .container form table {
+            background-color: rgb(255, 155, 208);
+        }
+
+        input {
+            outline: none;
+        }
+
+
+        /* Bai 2 */
+        .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .wrapper input{
+            width: 80%;
+            height: 100px;
+            margin-top: 30px;
+            font-size: 1.5rem;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Bai 1 -->
+    <div class="container">
+        <form>
+            <table border="1">
+                <tr>
+                    <td colspan="2">Chương trình tra tuổi</td>
+                </tr>
+
+                <tr>
+                    <td>Tuổi dương lịch</td>
+                    <td><input type="number" id="duonglich"></td>
+                </tr>
+                
+                <tr>
+                    <td>Tuổi âm lịch</td>
+                    <td><input type="text" id="amlich" readonly></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="reset" value="Xóa">
+                        <input type="submit" value="Tra cứu" onclick="traCuu(); event.preventDefault()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <h2>Bảng tra cứu</h2>
+        <form>
+            <table border="1" width="500px" >
+                <tr align="center">
+                    <th>Số</th>
+                    <th>Can</th>
+                    <th>Chi</th>
+                </tr>
+
+                <tr align="left">
+                    <td>0</td>
+                    <td>Canh</td>
+                    <td>Thân</td>
+                </tr>
+                <tr align="left">
+                    <td>1</td>
+                    <td>Tân</td>
+                    <td>Dậu</td>
+                </tr>
+
+                <tr align="left">
+                    <td>2</td>
+                    <td>Nhâm</td>
+                    <td>Tuất</td>
+                </tr>
+
+                <tr align="left">
+                    <td>3</td>
+                    <td>Qúi</td>
+                    <td>Hợi</td>
+                </tr>
+
+                <tr align="left">
+                    <td>4</td>
+                    <td>Giáp</td>
+                    <td>Tý</td>
+                </tr>
+
+                <tr align="left">
+                    <td>5</td>
+                    <td>Ất</td>
+                    <td>Sửu</td>
+                </tr>
+
+                <tr align="left">
+                    <td>6</td>
+                    <td>Bính</td>
+                    <td>Dần</td>
+                </tr>
+
+                <tr align="left">
+                    <td>7</td>
+                    <td>Đinh</td>
+                    <td>Mão</td>
+                </tr>
+
+                <tr align="left">
+                    <td>8</td>
+                    <td>Mậu</td>
+                    <td>Thìn</td>
+                </tr>
+                <tr align="left">
+                    <td>9</td>
+                    <td>Kỷ</td>
+                    <td>Tỵ</td>
+                </tr>
+                <tr align="left">
+                    <td>10</td>
+                    <td></td>
+                    <td>Ngọ</td>
+                </tr>
+                <tr align="left">
+                    <td>11</td>
+                    <td></td>
+                    <td>Mùi</td>
+            </table>
+        </form>
+    </div>
+
+    <!-- Bai 2 -->
+    <div class="wrapper">
+        <div class="flex">
+            <button onclick="pushDisplay('1')">1</button>
+            <button onclick="pushDisplay('2')">2</button>
+            <button onclick="pushDisplay('3')">3</button>
+            <button onclick="pushDisplay('4')">4</button>
+            <button onclick="pushDisplay('5')">5</button>
+            <button onclick="pushDisplay('+')">+</button>
+        </div>
+
+        <div class="flex">
+            <button onclick="pushDisplay('6')">6</button>
+            <button onclick="pushDisplay('7')">7</button>
+            <button onclick="pushDisplay('8')">8</button>
+            <button onclick="pushDisplay('9')">9</button>
+            <button onclick="pushDisplay('0')">0</button>
+            <button onclick="calculator()" class="button">=</button>
+        </div>
+
+        <div class="flex">
+            <input id="display" type="text" readonly value="">
+        </div>
+    </div>
+
+    <script>
+        let can = ["Canh", "Tân", "Nhâm", "Quí", "Giáp", "Ất", "Binh", "Đinh", "Mậu", "Kỷ"];
+        let chi = ["Thân", "Dậu", "Tuất", "Hợi", "Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi"];
+        function traCuu() {
+            let duonglich = document.getElementById("duonglich").value;
+            let result = can[duonglich%10] + " " + chi[duonglich];
+            document.getElementById("amlich").value = result;
+        }
+
+
+        // Bai 2
+        let display = document.getElementById("display");
+
+        function pushDisplay(event){
+            display.value += event;
+        }
+
+        function calculator(){
+            display.value += "="+ eval(display.value)
+        }
+    </script>
+    
+</body>
+</html>

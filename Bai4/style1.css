@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: black;
+    background-color: rgb(234, 149, 89);
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.Bai1 table,tr,th,td{
+    border: 1px solid orange;
+    border-collapse: collapse;
+    padding: 5px 10px;
+    text-align: center;
+}

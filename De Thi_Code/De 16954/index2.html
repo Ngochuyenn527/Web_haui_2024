@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="1" style="background-color: rgb(85, 176, 202);">
+            <tr align="center">
+                <td colspan="2">Sắp xếp mảng</td>
+            </tr>
+
+            <tr>
+                <td>Nhập mảng:</td>
+                <td><input type="text" id="one"></td>
+            </tr>
+
+            <tr>
+                <td>Mảng sau khi sắp xếp:</td>
+                <td><input type="text" readonly id="two"></td>
+            </tr>
+
+            <tr align="center">
+                <td colspan="2">
+                    <input type="reset" value="Hủy">
+                    <input type="submit"value="Sắp xếp" onclick="show(),event.preventDefault()">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        //đưa các ptu chẵn lên đầu mảng, lẻ cuối mảng, các số 0 ở giữa
+        function show(){
+            let one = document.getElementById("one").value;
+            let two = document.getElementById("two");
+            let change_one = one.split(",");
+
+            let n = change_one.length;
+            let a = [], y=0, z=n-1
+            for(let i of change_one){
+                if(i%2==0){
+                    a[y] = i;
+                    y++;
+                }
+                else{
+                    a[z] = i;
+                    z--;
+                }
+            }
+
+
+            while(y<=z){
+                a[y] = 0;
+                y++;
+            }
+
+            //reverse dãy số lẻ
+            let i=z+1, j=n-1;
+            while(i<j){
+                let temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+                i++; j--;
+            }
+
+
+            two.value = a.toString()
+
+
+        }
+
+    </script>
+</body>
+</html>

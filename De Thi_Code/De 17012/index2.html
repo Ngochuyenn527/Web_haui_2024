@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        background-color: rgb(86, 169, 169);
+        width: 80%;
+    }
+    table tr td:first-child{
+        width: 20%;
+    }
+    .box input{
+        width: 99%;
+    }
+</style>
+
+<body>
+    <form action="">
+        <table border="1" align="center">
+            <tr align="center">
+                <td colspan="2">TÌM TỪ DÀI NHẤT</td>
+            </tr>
+            <tr>
+                <td>Nhập xâu</td>
+                <td class="box"><input type="text" id="one" required></td>
+            </tr>
+            <tr>
+                <td>Thông báo kết quả</td>
+                <td class="box"><input type="text" id="two" readonly></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="reset" value="Xóa">
+                    <input type="submit" value="Tìm kiếm" onclick="show(), event.preventDefault()">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function show(){
+            let one = document.getElementById("one")
+            let two = document.getElementById("two")
+            let one_change = one.value.split(" ")
+
+
+            let max=0, index = 0;
+            for(let i=0; i<one_change.length; i++){
+                if(one_change[i].length > max){
+                    max = one_change[i].length
+                    index = i
+                }
+            }
+            two.value = ("Từ dài nhất là "+one_change[index]+" xuất hiện ở vị trí "+ one.value.indexOf(one_change[index]))  
+        }
+    </script>
+</body>
+</html>

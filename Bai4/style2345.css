@@ -1,0 +1,55 @@
+.nav_lv1 li{
+    background-color: rgb(14, 14, 92);
+    border-right: 1px solid rgb(234, 232, 232);
+    border-bottom: 1px solid rgb(234, 232, 232);
+}
+
+.nav_lv2 li{
+    background-color:  rgb(151, 13, 13);
+}
+
+li:hover{
+    background-color: rgb(151, 13, 13);
+}
+
+a{
+    color: white;
+    font-size: 2rem;
+}
+
+.Bai2 .nav_lv1{
+    display: flex;
+}
+
+.Bai3 .nav_lv1{
+    display: flex;
+}
+
+.Bai3 .nav_lv1 li:hover .nav_lv2{
+    position: absolute;
+    display: flex;
+    margin-top: 15px;
+    left: 0px;
+    width: 700px;
+}
+
+.Bai4, .Bai5{
+    width: 300px;
+    margin-top: 80px;
+}
+
+.Bai5 .nav_lv1 li:nth-child(2){
+    position: relative;
+}
+.Bai5 .nav_lv1 li:hover .nav_lv2{
+    position: absolute;
+    display: block;
+    margin-top: 15px;
+    left: 300px;
+    top: -15px;
+    width: 300px;
+}
+
+
+
+

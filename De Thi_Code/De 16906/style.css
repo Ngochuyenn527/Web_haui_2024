@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:  0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+    padding: 20px;
+}
+
+li:hover {
+    background-color: #FF3399;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* header */
+.header .search input{
+    padding: 10px 30px;
+    border: 1px solid rgb(135, 135, 135);
+    width: 400px;
+    height: 40px;
+}
+
+.header .item{
+    background-color: #FF3399;
+    color: white;
+    padding: 10px;
+    width: 170px;
+}
+
+.header .item:hover{
+    background-color: yellow;
+    color: red;
+}
+
+
+/* menu */
+.menu .nav_lv1{
+    background-color: black;
+    color: white;
+}
+
+.menu .nav_lv2{
+    display: none;
+    background-color: white;
+    color: black;
+}
+
+.menu .nav_lv1 li:nth-child(3){
+    position: relative;
+}
+.menu .nav_lv1 li:nth-child(3):hover .nav_lv2{
+    display: block;
+    position: absolute;
+    width: 150px;
+    background-color: white;
+    margin-top: 20px;
+    left: 0;
+}
+
+
+/* content */
+.content div{
+    justify-content: space-between;
+}
+
+select{
+    padding: 5px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+select:nth-child(2){
+    width: 70px;
+}
+
+button{
+    border: 1px solid black;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+button:first-child{
+    background-color: black;
+    color: white;
+}
+
+button:hover{
+    background-color: rgb(179, 174, 174);
+}
+
+
+.info .img img{
+    width: 300px;
+}

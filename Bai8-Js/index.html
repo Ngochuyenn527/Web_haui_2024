@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bai 1
+        let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        let name = ["th", "st", "nd", "rd"]
+        for(let i=0; i<color.length; i++){
+            if(i<3){
+                document.write((i+1) + name[i+1] + " choice is " + color[i] + "<br>")
+            }
+            else{
+                document.write((i+1)+name[0]+ " choice is "+color[i]+ "<br>");
+            }
+        }
+
+
+        // Bai 2: Viết hàm kiểm tra số lương kí tự 'h' và a' của 1 chuỗi có bằng nhau hay không
+        var str = "hoc Java that vi dieu"
+        var a = str.split("")
+        var count_h = 0, count_a = 0
+        for(let x of a){
+            if(x=='h')count_h ++;
+            else if(x=='a') count_a++
+        }
+        function check(){
+            document.write("h xh "+count_h+" lần, a xh "+count_a+" lần")
+        if(count_a == count_h){
+            document.write("vậy số lượng bằng nhau <br>")
+        }
+        else{
+            document.write(" vậy số lượng khác nhau<br>")
+        }
+        }
+        check();
+
+
+        // Bai 3: .  Viết hàm chuyển đổi các chữ hoa trong chuỗi thành chữ thường và ngược lại. 
+        var st = "I Love You"
+        document.write(st+"<br>")
+        function change(){
+            let text =""
+            for(let i=0; i<st.length; i++){
+            if(st.charAt(i) == st.charAt(i).toUpperCase()){
+                text+= st.charAt(i).toLowerCase()
+            }
+            else{
+                text += st.charAt(i).toUpperCase()
+            }
+        }
+        document.write(text)
+        }
+        change()
+
+    </script>
+</body>
+</html>

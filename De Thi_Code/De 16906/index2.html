@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrapper{
+        width: 100%;
+        margin-left: 100px;
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <!-- nhập vào một chuỗi <= 255 ky tu 
+        Thông báo ra màn hình cho biết trong chuỗi có mấy từ có 4 ký tự và bắt đầu bằng chữ m -->
+    <form>
+        <table>
+            <tr>
+                <td>Nhap chuoi:</td>
+                <td><input type="text" id="one" required></td>
+            </tr>
+            <tr>
+                <td>So tu co 4 ki tu la:</td>
+                <td><input type="text " readonly id="two"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="box_submit">
+                    <input type="submit" onclick="check(), event.preventDefault()">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <script>      
+        function check(){ 
+            let str = document.getElementById("one").value
+            let a = str.split(" ")
+
+            let count = 0
+            if( str.length > 0 && str.length  <= 255){
+                for(let i=0; i<a.length; i++){
+                    if(a[i].length == 4){
+                        count++
+                    }
+                }
+                document.getElementById("two").value += count
+            }
+
+            else if( str.length < 0 || str.length > 255){
+                alert("chuoi phai <= 255 ky tu")
+            }
+
+        }
+
+
+        
+    </script>
+</body>
+</html>

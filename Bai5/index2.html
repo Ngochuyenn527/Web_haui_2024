@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+</head>
+<body>
+    <p for="ptb2">Cho bài toán phương trình bậc 2: ax<sup>2</sup> + bx + c = 0 với
+        a= <input type="number" value="4" id="valueA">,
+        b= <input type="number" value="6" id="valueB">,
+        c= <input type="number" value="2" id="valueC">
+    </p>
+    <button onclick="ptb2()">Giải</button>
+    <div id="demo"></div>
+
+
+
+    <script>
+        function ptb2() {
+        let text = "";
+            // const a = 4, b = 6, c = 2;
+            const a = document.getElementById("valueA").value;
+            const b = document.getElementById("valueB").value;
+            const c = document.getElementById("valueC").value;
+
+            if (a == 0) {
+                if (b == 0) {
+                    if (c == 0) {
+                        text += "Phương trình vô số nghiệm";
+                    } else {
+                        text += "Phương trình vô nghiệm";
+                    }
+                } else {
+                    const x = -c / (1.0 * b)
+                    text += "Phương trình có 1 nghiệm: " + x;
+                }
+            } else {
+                const del = b*b - 4*a*c;
+                if (del < 0 ) {
+                    text += "Phương trình vô nghiệm";
+                } else if (del == 0) {
+                    const x = -b / (2.0 * a)
+                    text += "Phương trình có 1 nghiệm duy nhất: x = " + x;
+                } else {
+                    let x1, x2;
+                    x1 = (-b - Math.sqrt(del)) / (2.0 * a);
+			        x2 = (-b + Math.sqrt(del)) / (2.0 * a);
+                    text += "Phương trình có nghiệm phân biệt: x1 = " + x1 + " và x2 = " + x2;
+                }
+            }
+
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

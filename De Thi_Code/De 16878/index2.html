@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="1" style="background-color: rgb(89, 156, 134);">
+            <tr>
+                <td>Nhập số thứ nhất:</td>
+                <td><input type="number" id="one"></td>
+            </tr>
+
+            <tr>
+                <td>Nhập số thứ hai:</td>
+                <td><input type="number"id="two"></td>
+            </tr>
+            
+            <tr>
+                <td>UCLN của hai số trên là:</td>
+                <td><input type="number" id="three" readonly></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" onclick="show(), event.preventDefault()">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function show(){
+            let one = document.getElementById("one").value
+            let two = document.getElementById("two").value
+            let three = document.getElementById("three")
+
+            let text = ""
+            function ucln(one,two){
+                if(one%two == 0){
+                    return two
+                }
+                else{
+                    return ucln(two,one%two)
+                }
+            }
+
+            three.value += ucln(one,two)
+        }
+
+
+
+    </script>
+</body>
+</html>

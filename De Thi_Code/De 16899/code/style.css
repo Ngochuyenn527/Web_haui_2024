@@ -1,0 +1,115 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    border: 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    padding: 20px ;
+}
+
+li:hover{
+    background-color: rgb(199, 193, 193);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    margin-right: 20px;
+}
+
+
+
+.bottom{
+    background-color: #FF3399;
+    height: 50px;
+}
+
+.search input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.bottom .flex p{
+    margin: 0 20px;
+    color: white;
+}
+
+
+
+.nav_lv2{
+    display: block;
+    width: 193px;
+}
+
+.items_lv3{
+    text-align: left;
+    border-bottom: 1px solid rgb(128, 126, 126);
+}
+
+.nav_lv2, .nav_lv3{
+    background-color: white;
+}
+
+.nav_lv3{
+    display: none;
+}
+
+.nav_lv2 li:nth-child(3){
+    position: relative;
+}
+
+.nav_lv2 li:nth-child(3):hover .nav_lv3{
+    position: absolute;
+    width: 200px;
+    display: block;
+    top: 0;
+    left: 193px;
+}
+
+section{
+    margin: 0 20px;
+}
+
+button{
+    padding: 5px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+.menu{
+    flex: 2;
+}
+
+.content{
+    flex: 10;
+}
+
+.info{
+    margin-bottom: 20px;
+}
+
+.content div:nth-child(4) div{
+    padding: 20px;
+    border-radius: 5px;
+}
+
+

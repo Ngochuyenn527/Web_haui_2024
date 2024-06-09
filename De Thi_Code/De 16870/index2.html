@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="1" style="background-color: rgb(100, 197, 165);">
+            <tr>
+                <td>Nhập số nguyên: </td>
+                <td><input type="number" id="one" required></td>
+            </tr>
+
+            <tr>
+                <td>Số chữ số lẻ: </td>
+                <td><input type="number" id="two" readonly></td>
+            </tr>
+
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" onclick="show(),event.preventDefault()">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function show(){
+            let one = document.getElementById("one")
+            let two = document.getElementById("two")
+            let one_change = one.value.split("")
+
+            let count=0
+            for(let i of one_change){
+                if(i%2 != 0){
+                    // count++
+                    document.write(typeof(i))
+                }
+            }
+            two.value = count
+        }
+    </script>
+    
+</body>
+</html>

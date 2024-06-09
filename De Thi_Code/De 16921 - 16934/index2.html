@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Tháng <input type="number" name="" id="one"> Năm: <input type="number" id="two"></p>
+    <p>Số ngày: <input type="number" id="three"></p>
+    <input type="submit" value="Hiển thị số ngày của tháng" onclick="show()">
+</body>
+
+<script>
+    function show(){
+        let one = document.getElementById("one").value
+        let two = document.getElementById("two").value
+        let three = document.getElementById("three")
+
+        if(one == 1 || one == 3 ||one == 5 || one == 7 ||  one == 8 || one == 10 || one == 12 ){
+            three.value = 30;
+        }
+        else if( one == 4 || one == 6 || one == 9 || one == 11  ){
+            three.value = 31;
+        }
+        else{
+            if(two%4 == 0){
+                three.value = 29;
+            }
+            else{
+                three.value = 28;
+            }
+        }
+
+    }
+
+</script>
+</html>

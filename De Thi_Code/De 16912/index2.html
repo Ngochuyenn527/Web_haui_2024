@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="1">
+            <tr>
+                <td>Nhập chuỗi:</td>
+                <td><input type="text" id="one" required></td>
+            </tr>
+
+            <tr>
+                <td>Nhập từ:</td>
+                <td><input type="text" id="two" required></td>
+            </tr>
+
+            <tr>
+                <td>Thông báo:</td>
+                <td><input type="text" id="three" readonly></td>
+            </tr>
+
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" onclick="show(), event.preventDefault()">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function show(){
+            let one = document.getElementById("one").value
+            let two = document.getElementById("two").value
+            let three = document.getElementById("three")
+
+            let one_change = one.split(" ");
+            if(one.length >= 1 && one.length<=255){
+                let count =0;
+                for(let i=0; i<one_change.length; i++){
+                    if(one_change[i]== two){
+                        count++;
+                    }
+                }
+
+                three.value = count
+            }
+        }
+    </script>
+    
+</body>
+</html>

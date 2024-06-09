@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" id="one"></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="two"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Kiểm tra pasword" onclick="show()">
+                    <input type="reset" name="" id="">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+        function show(){
+            let two = document.getElementById("two").value
+        if(two.length >=8){
+            let count1 = 0
+            for(let i in two){
+                if(two[i] != " " && two[i] == two[i].toUpperCase()){
+                    count1++;
+                }
+            }
+
+
+            let count2=0
+            for(let i=0; i<=9; i++){
+                if(two[0] == i){
+                    count2++;
+                }
+            }
+
+            if(count1 != 0 && count2 == 0){
+                alert("Ban nhap dung")
+            }
+            else{
+                alert("Ban nhap sai")
+            }
+        }
+        else{
+            alert("phai co it nhat 8 ky tu")
+        }
+        }
+    </script>
+</body>
+
+</html>

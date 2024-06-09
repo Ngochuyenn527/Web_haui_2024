@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //STRING
+const s = "Ngoc\.Huyenn";
+console.log(s);
+
+const s1  = `Ngoc 
+Huyenn`; // `` giữ nguyên định dạng
+console.log(s1);
+
+console.log("length(s) = " + s.length);
+
+console.log("indexOf: "+s.indexOf("Huyenn")); // just return first index
+console.log("lastIndexOf: "+s.lastIndexOf("Huyenn"));
+
+
+//cắt 
+const slice1 = s.slice();
+console.log(slice1);
+const slice2 = s.slice(3);
+console.log(slice2);
+const slice3 = s.slice(3,6);
+console.log(slice3);
+
+const substring = s.substring(3,6);
+console.log(substring);
+//slice sử dụng được số âm, substring thì 0 thể
+
+
+console.log(s.replace("n", "N"));
+console.log(s.replaceAll("n", "N"));
+
+console.log(s.toUpperCase());
+console.log(s.toLowerCase());
+
+
+//trim : xóa hết dấu cách của đầu và cuối
+//trimStart, trimEnd
+console.log(s.padStart(10,"ab"));
+console.log(s.charAt(0));
+console.log(s.charCodeAt(0));
+
+// cắt ra qua dấu cách
+// chuyển một string thành 1 aray, cần tìm ra điểm chung của chuỗi đó
+const string = "1 2 3 4 5 6";
+console.log(string.split(" "));
+
+//làm tròn số thập phân toFixed();
+var number = 12.4343;
+console.log(number.toFixed()) // ==toFixed(0)
+console.log(number.toFixed(3))
+
+
+//  ARRAY
+var list = ["Bui", "Thi", "Ngoc", "Huyenn"];
+console.log(list.toString()); //toString() chuyển thành string, Tự động thêm dấu phẩy ngăn cách.
+console.log(list[0]);
+console.log(list.join( )); //Thêm dấu bất kỳ để ngăn cách giữa các phần tử thanhf string
+console.log(list.pop()) //xóa cuối
+console.log(list.push("Thao", "Huy")) // thêm cuối (0 giới hạn)
+console.log(list.shift()) // xóa đầu
+console.log(list.unshift("Dương", "Thái")) //thêm đầu  (0 giới hạn)
+
+//chèn ptu bằng splice
+console.log(list.splice(2,0, "Nguyen", "Anh", "My")); 
+//array.splice(index, howmany, item1, ....., itemX)  
+//howmany: số ptu cần xóa >=0
+//index: vị trí thêm, xóa
+console.log(list)
+
+//xóa ptu bằng splice
+console.log(list.splice(2, 2)) // trả về ptu cần xóa
+console.log(list)
+
+//xóa và chèn
+console.log(list.splice(1, 1, "Luowng", "Phus"))
+console.log(list)
+
+//concat : nối 2 array
+var list2=["rela", "tionship", "is", "not", "about"];
+console.log(list.concat(list2))
+
+for(let i=0; i<list.length; i++){
+    console.log("list[" +i+ "] = " +list[i]);
+}
+
+//sort
+console.log(list.sort());
+console.log(list.reverse()); //đảo ngược
+
+    </script>
+    
+</body>
+</html>

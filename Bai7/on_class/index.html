@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onfocus -->
+    <h1>The onfocus Attribute</h1>
+    <p>Enter your email <input type="email" id="email" onfocus="focuss()"></p>
+    <br>
+    <!-- onchange -->
+    <h1>The onchange Attribute</h1>
+    <p>Enter your name: <input type="text" id="name" onchange="changee()"></p>
+
+    <script>
+        function focuss(){
+            let email = document.getElementById("email");
+            email.style.background = "yellow"
+        }
+
+        function changee(){
+            let name = document.getElementById("name");
+            name.value = name.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

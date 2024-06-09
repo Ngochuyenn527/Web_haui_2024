@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+//sort
+        var arr2 = [3, 3, 3, 'a', 'a', 'a', 2, 2, 'a', 3, 2, 4, 9, 2];
+        document.write("Mảng arr2 sắp xếp tăng dần: " + arr2.sort() + "<br>");
+
+//rút gọn mảng sao cho các gtri 0 trùng nhau
+        var a = []
+        var k = 0
+        document.write("a.length = " + a.length + "<br>")
+        for(var i=0; i<arr2.length; i++){
+            if(arr2[i] != arr2[i+1]){
+                a[k] = arr2[i];
+                k++;
+            }
+        }
+        for(var i=0; i<k; i++){
+            document.write(a[i] +" ")
+        }
+        document.write("<br>")
+
+//cách rút gọn mảng nhanh hơn
+        // var arr3 = [3,'a', 2, 4, 9];
+        // document.write("<br>Mảng arr3 sắp xếp giảm dần: "+arr3.sort() + "<br>")
+
+//tìm gtri xh nhiều nhất và xh bao nhiêu lần
+        function find_and_count_showmore(){
+            var b = []
+            for(var val of a){
+                var count = 0;
+                count = arr2.lastIndexOf(val) - arr2.indexOf(val) +1
+                b.push(count)
+                document.write("<br>"+val+" ("+count+" times )")
+
+            }
+            var max = Math.max(...b); // return count max
+            document.write("<br>Phần tử xuất hiện nhiều nhất là: ")
+            for(let val in b){
+                if(b[val] == max){
+                    let indexMax = val
+                    document.write(a[val] +" ");
+                }
+            }
+            document.write(" với số lần xuất hiện là "+max+" lần<br>")
+        }
+        find_and_count_showmore();
+
+//tìm gtri xh ít nhất và xh bao nhiêu lần
+        function find_and_count_showless(){
+            var b = []
+            for(var val of a){
+                var count = 0;
+                count = arr2.lastIndexOf(val) - arr2.indexOf(val) +1
+                b.push(count)
+                document.write("<br>"+val+" ("+count+" times )")
+
+            }
+            var min = Math.min(...b); // return count max
+            document.write("<br>Phần tử xuất hiện ít nhất là: ")
+            for(let val in b){
+                if(b[val] == min){
+                    let indexMin = val
+                    document.write(a[val] +" ");
+                }
+            }
+            document.write(" với số lần xuất hiện là "+min+" lần<br>")
+        }
+        find_and_count_showless();
+
+
+
+//tìm giá trị lớn nhất và đếm xem xh bnh lần
+            //Math.max(0, 150, 30, 20, -8, -200);
+            //(...) to spread the elements of the array b
+            // const max = Math.max(...b);   // giá trị max của mảng b
+        var arr4 = [3,5,7,2,9,5,9,4,5,9,2,0];
+        document.write("<br>"+arr4.sort() +"<br>")
+        var count_xh = 1;
+        var i=arr4.length -1
+        while(arr4[i] == arr4[i-1]){
+            count_xh++;
+            i--
+        }
+        document.write("Max = "+arr4[arr4.length -1] + " và xh " +count_xh+ " lần <br>")
+
+
+
+//đếm số lần xh của mỗi ptu trong mảng 
+        var arr5 = [3,5,7,2,'a',9,5,9,'a',4,5,9,'b',2,0];
+        document.write("<br>"+arr5.sort())
+
+//rút gọn mảng sao cho các gtri 0 trùng nhau
+        var a = []
+        var k = 0
+        document.write("<br>a.length = " + a.length + "<br>")
+        for(var i=0; i<arr5.length; i++){
+            if(arr5[i] != arr5[i+1]){
+                a[k] = arr5[i];
+                k++;
+            }
+        }
+        for(var i=0; i<k; i++){
+            document.write(a[i] +" ")
+        }
+//đếm       
+        function find_and_count(){
+            var b = []
+            for(var val of a){
+                var count = 0
+                count = arr5.lastIndexOf(val) - arr5.indexOf(val)+1
+                b.push(count)
+                document.write("<br>"+val+" ("+count+" times )")
+            }
+        }
+
+        find_and_count()
+        document.write("<br>")
+    
+
+
+//tìm các phần tử trùng lặp trong mảng 
+        function find_loop(){
+            document.write("<br>ptu loop:")
+            var b = []
+            for(var val of a){
+                var count = 0
+                count = arr5.lastIndexOf(val) - arr5.indexOf(val)+1
+                if(count >=2){
+                    b.push(count)
+                    document.write("<br>"+val+" ("+count+" times )")
+                }   
+            }
+        }
+        find_loop()
+
+
+
+
+
+    </script>
+</body>
+</html>

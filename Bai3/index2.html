@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai3.2</title>
+</head>
+<style>
+    .box1{
+        background-color: rgb(128, 186, 211);
+        height: 150px;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+
+    .box3{
+        border: 1px solid black;
+        box-shadow: 5px 5px 10px 0px black;
+        height: 300px;
+        margin: auto;
+        padding: 30px;
+        margin-bottom: 100px;
+
+    }
+    .box3 span{
+        color:red;
+    }
+    .box3_child{
+        margin: auto;
+        background-color: rgb(199, 199, 199);
+        color: rgb(54, 54, 211);
+    }
+    .box3_child p:nth-child(1){
+        padding-left: 200px;
+    }
+    .box3_child p:nth-child(2){
+        padding-left: 250px;
+    }
+    .box3_child p:nth-child(3){
+        padding-left: 200px;
+    }
+
+
+    .box2{
+        position: relative;
+        background-color: #A06D21;
+        color: white;
+        padding: 20px;
+        height: 650px;
+    }
+    img{
+        margin-top: 50px;
+        max-width: 60%;
+    }
+    .box2>.infor{
+        position: absolute;
+        top: 0;
+        color: white;
+    }
+</style>
+<body>
+    <div class="box1">
+        <h1 style="color: white; font-family: 'Times New Roman', Times, serif; margin-left: 600px; padding-top: 30px ">My First CSS Example</h1>
+        <p style="color: black; padding-left: 20px; font-size: 1.5rem;">this is a paragraph</p>
+    </div>
+
+    <div class="box3">
+        <h1 style="color: cadetblue; text-align: center;">Định dạng văn bản</h1>
+        <p><b><ins>Hóa học:</ins><i> Nước:</i><span>H<sub>2</sub>O</span> ;<i>Axit Sunfuric:</i><span>H<sub>2</sub>SO<sub>4</sub></span></b></p>
+        <p><b><ins>Toán học:</ins></b><i>Phương trình bậc 2:</i><span>ax<sup>2</sup> + bx + c = 0</span></p>
+        <p><b><ins>Tin hoc:</ins></b><i>Vòng lặp for</i></p>
+        <div class="box3_child">
+            <p>For i = 0 To 10</p>
+            <p>Tong = Tong + 1</p>
+            <p>Next</p>
+        </div>
+    </div>
+
+    <div class="box2" style=" text-align: center;">
+        <div class="img">
+            <img src="https://th.bing.com/th/id/R.e7156793449f86bac1e9c559b4fa939c?rik=ILFrBTrVidX1Pw&pid=ImgRaw&r=0&sres=1&sresct=1" >
+        </div>
+        <div class="infor">
+            <h1 style=" color: #FFCC00;">"Bất đáo Trường Thành phi hảo hán"...</h1>
+            <p>A scanner can see images and converts the printed text or pictures into electronic code that can be understood by the computer. With a flatbed color scanner, the paper with the image is placed face down on a glass screen, as with photocopier. Beneath the glass are lighting and the measurement devices. Once the scanner is activated, It reads the image as a series dots and they generates as digitized image that is sent to the computer and stored as a file. The scanner operates by using three rotating lamps, each which has different colour filter: red, green and blue. The resulting three separate images are combined into one by appropriate software. A digital camera takes photos automatically and converts into digital data. It doesn’t use the film found in traditional camera, instead it has special light-sensitive silicon chip. Photographs are stored in the camera memory card before being sent to the computer. Some cameras can also be connected a printer or a TV set to make viewing images easier. This usually the case with camera phones – mobile phones with a built – in camera.</p>
+        </div>
+    </div>
+
+
+    
+    
+</body>
+</html>

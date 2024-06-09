@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Giải hệ phương trình bậc nhất 2 ẩn:</p>
+    <p>ax + by = c</p>
+    <p>a'x + b'y = c'</p>
+    <p> với a = <input type="number"  value="1" id="valueA">,</p>
+    <p> với b = <input type="number"  value="2" id="valueB">,</p>
+    <p> với c = <input type="number"  value="3" id="valueC">,</p>
+    <p> với a' = <input type="number" value="4"  id="valueD">,</p>
+    <p> với b' = <input type="number" value="5"  id="valueE">,</p>
+    <p> với c' = <input type="number" value="6"   id="valueF"></p>
+    <button onclick="giai()">Giải</button>
+    <div id="demo"></div>
+
+    <h1>JavaScipt có thể kiểm soát form</h1>
+    <p>Hãy nhập số vào hộp text (từ 1 đến 10):</p>
+    <input type="text" id="giatri">
+    <input type="submit" id="submit" onclick="submit()">
+    <div id="demo1"></div>
+
+    <script>
+
+        function giai(){
+            let a = document.getElementById("valueA").value;
+            let b = document.getElementById("valueB").value;
+            let c = document.getElementById("valueC").value;
+            let d = document.getElementById("valueD").value;
+            let e = document.getElementById("valueE").value;
+            let f = document.getElementById("valueF").value;
+            let x,y
+            y = (c*d-a*f) / (b*d-a*e);
+            x = (c - (b*y)) / a;
+            let text = "";
+            text += "pt có 2 nghiệm x = " + x + " và y = " + y;
+
+            document.getElementById("demo").innerHTML = text
+
+        }
+
+        function submit(){
+            let giatri = document.getElementById("giatri");
+            let text = ""
+            if(giatri.value >=1 && giatri.value <=10){
+                text+="Dữ liệu đúng"
+            }
+            else{
+                text += "Dữ liệu 0 đúng"
+            }
+            document.getElementById("demo1").innerHTML = text ;
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="1">
+            <tr>
+                <td>Nhập số thứ nhất:</td>
+                <td><input type="number" name="" id="one"></td>
+            </tr>
+            <tr>
+                <td>Nhập số thứ hai:</td>
+                <td><input type="number" name="" id="two"></td>
+            </tr>
+            <tr>
+                <td>BCNN của hai số trên là:</td>
+                <td><input type="number" name="" id="three"></td>
+            </tr>
+            
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" name="" id="" value="Tìm" onclick="show(), event.preventDefault()">
+                    <input type="reset" name="" id="" value="Hủy Bỏ">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    
+</body>
+    <script>
+        function show(){
+            let one = document.getElementById("one").value;
+            let two = document.getElementById("two").value;
+            let three = document.getElementById("three");
+
+            function UCLN(one,two){
+                if(one%two == 0){
+                    return two
+                }
+                else{
+                    return UCLN(two, one%two)
+                }
+            }
+
+            if(one==0 || two==0){
+                three.value = 0;
+            }
+            else{
+                three.value = (one*two)/UCLN(one,two)
+            }
+            
+
+        }
+    </script>
+</html>

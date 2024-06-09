@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+    padding: 15px;
+}
+
+.nav_lv2{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}

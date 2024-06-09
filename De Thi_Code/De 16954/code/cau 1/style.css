@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+li{
+    list-style: none;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* header */
+.header{
+    background-color: red;
+    color: white;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+/* header left */
+.header .left .logo {
+    height: 50px;
+}
+
+.header .left .search > input{
+    width: 400px;
+    height: 40px;
+    padding: 10px 30px;
+    margin-left: 10px;
+}
+
+.header .left .search > div{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+}
+
+
+/* header right */
+.header .right{
+    text-align: center;
+}
+
+.header .right .item{
+    margin: 0 10px;
+}
+
+
+/* menu */
+.menu .nav_lv1{
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+}
+
+.menu  .nav_lv2{
+    display: none;
+    padding: 0 20px;
+    border: 1px solid gray;
+}
+
+.menu  .nav_lv1 li:nth-child(5){
+    position: relative;
+}
+
+.menu  .nav_lv1 li:nth-child(5):hover .nav_lv2{
+    position: absolute;
+    display: block;
+    background-color: white;
+    color: black;
+    width: 500px;
+    margin-top: 20px;
+    left: 0;
+}
+
+.menu  .nav_lv2 .items_lv2{
+    justify-content: space-between;
+}
+
+.menu  .nav_lv2 .items_lv2 .img{
+    flex: 1;
+}
+.menu  .nav_lv2 .items_lv2 .info{
+    flex: 15;
+    margin-left: 20px;
+}
+.menu  .nav_lv2 .items_lv2 p:nth-child(2){
+    color: red;
+}
+
+
+/* content heading */
+.content .heading{
+    justify-content: space-between;
+}
+
+.content .heading > p {
+    background-color: rgb(125, 125, 55);
+    height: 50px;
+    width: 300px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+.content .heading > div > p {
+    margin: 0 10px;
+}
+
+/* content main */
+.content .main .left{
+    flex: 1;
+    border: 1px solid rgb(176, 176, 176);
+    padding: 20px;
+    height: 520px;
+}
+
+.content .main .right{
+    flex: 6;
+}
+/* left */
+.content .main .left div > div{
+    padding: 20px;
+}
+
+.content .main .left div > div .img{
+    width: 100px;
+}
+
+/* right */
+.main .right .product {
+    height: 100%;
+    width: 25%;
+}
+
+.main .right .product .infor {
+    width: 100%;
+    padding: 40px 20px 10px 20px;
+    border: 1px solid rgb(176, 176, 176);
+}
+
+.main .product > div:last-child {
+    border: 1px solid rgb(176, 176, 176);
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.main .right .product .price {
+    color: red;
+    font-size: 20px;
+}
+
+.main .product .original-price {
+    color: gray;
+    margin-top: 10px;
+    text-decoration: line-through;
+    font-size: 20px;
+}
+.main .product .cart {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

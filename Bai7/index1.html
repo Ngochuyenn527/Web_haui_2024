@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1" onfocus="focuss()">
+    <input type="text" id="input2" onchange="changee()">
+
+    <script>
+        function focuss(){
+            // let input = document.getElementById("input");
+            alert("focus")
+        }
+        function changee(){
+            let input = document.getElementById("input2");
+            input.value = input.value.toLowerCase();
+        }
+    </script>
+</body>
+</html>
